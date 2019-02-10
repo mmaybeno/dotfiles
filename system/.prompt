@@ -1,0 +1,21 @@
+# Git branch in terminal
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[g:\1]/'
+}
+
+# Python virtualenv
+function set_virtualenv () {
+  if test -z "$VIRTUAL_ENV" ; then
+      echo ""
+  else
+      echo "[pyv:`basename \"$VIRTUAL_ENV\"`]"
+  fi
+}
+
+# Name-MBP:[~]$
+# PS1="\e[0;31m\h:\e[0;34m[\w]$ \e[0m"
+
+# Original
+# export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+export PS1="\[\e[0;31m\]\h:\[\e[0;34m\][\w]\[\e[2;92m\]\$(set_virtualenv)\[\e[0;36m\]\$(parse_git_branch)\[\e[0m\]$ "

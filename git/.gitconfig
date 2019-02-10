@@ -1,0 +1,36 @@
+;[user]
+;    name = John Doe
+;    email = some_email@gmail.com
+[core]
+    excludesfile = ~/.gitignore_global
+    autocrlf = input
+    editor = vim
+[push]
+    default = simple
+    followTags = true
+[merge]
+    ff = only
+[alias]
+    st = status
+    co = checkout
+    lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
+    br = branch
+    ci = commit
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    stash-all = stash save --include-untracked
+    undo = reset --soft HEAD^
+[fetch]
+    prune = true
+[status]
+    showUntrackedFiles = all
+[diff]
+  tool = icdiff
+[difftool]
+  prompt = false
+[difftool "icdiff"]
+  cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f

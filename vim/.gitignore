@@ -1,0 +1,3 @@
+# ignore symlinks
+ftdetect/*.vim
+bundle/*
