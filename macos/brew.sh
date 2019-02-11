@@ -20,11 +20,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
 # Install other useful binaries and fonts.
-brew tap homebrew/versions
-brew tap homebrew/dupes
 brew tap caskroom/fonts
 apps=(
   ack
@@ -40,15 +38,14 @@ apps=(
   findutils
   git
   git-lfs
-  gnu-sed --with-default-names
+  gnu-sed
   go
-  gradle
   grep
   highlight
   htop
   httpie
   icdiff
-  imagemagick --with-webp
+  imagemagick
   jq
   libev
   libidn
@@ -75,6 +72,7 @@ apps=(
   vim
   wget
   wrk
+  zlib
   zopfli
 )
 brew install "${apps[@]}"
@@ -96,13 +94,10 @@ cask_apps=(
   font-roboto
   font-source-code-pro
   google-chrome
-  google-drive
   intellij-idea
   iterm2
   java
-  lastpass
   pycharm
-  robo-3t
   slack
   skype
   sublime-text
@@ -115,7 +110,7 @@ cask_apps=(
 brew cask install "${cask_apps[@]}"
 
 # Quick look apps
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package
 
 # Remove outdated versions from the cellar.
 brew cleanup

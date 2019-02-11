@@ -5,4 +5,4 @@
 
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +VundleUpdate +qall
-python3 ~/.vim/bundle/YouCompleteMe/install.py
+python ~/.vim/bundle/YouCompleteMe/install.py
