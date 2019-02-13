@@ -46,6 +46,7 @@ apps=(
   httpie
   icdiff
   imagemagick
+  jenv
   jq
   libev
   libidn
@@ -97,6 +98,7 @@ cask_apps=(
   intellij-idea
   iterm2
   java
+  postman
   pycharm
   slack
   skype
