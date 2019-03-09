@@ -40,4 +40,4 @@ export GRADLE_HOME=/usr/local/opt/gradle/libexec;
 
 # JAVA HOME
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-export PATH="$HOME/.jenv/shims:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
