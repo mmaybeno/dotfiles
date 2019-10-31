@@ -92,6 +92,7 @@ cask_apps=(
   dropbox
   evernote
   flux
+  font-hack
   font-roboto
   font-source-code-pro
   google-chrome
