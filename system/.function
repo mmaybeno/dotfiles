@@ -85,3 +85,7 @@ function fs() {
 function tre() {
         tree -aC -I '.git|node_modules|bower_components|bundle' --dirsfirst "$@" | less -FRNX;
     }
+
+function makegif() {
+    ffmpeg -i "$1"  -r 5 -vf "scale=350:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$2"
+}
