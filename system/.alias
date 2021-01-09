@@ -50,6 +50,8 @@ alias dcu='docker-compose up -d'
 
 alias dcrm='dc rm -sf'
 
+alias dimgsort='docker images | sort -k7 -h'
+
 function dcul () {
   dcu $@ && dcl $@
 }
