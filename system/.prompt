@@ -18,5 +18,5 @@ function set_virtualenv () {
 # Original
 # export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
-export PS1="\[\e[0;31m\]\h:\[\e[0;34m\][\w]\[\e[2;92m\]\$(set_virtualenv)\[\e[0;36m\]\[\e[0m\]$ "
+export PS1="\[\e[0;31m\]\u:\[\e[0;34m\][\w]\[\e[2;92m\]\$(set_virtualenv)\[\e[0;36m\]\[\e[0m\]$ "
 stty -ixon
