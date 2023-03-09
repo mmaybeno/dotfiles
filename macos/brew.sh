@@ -7,10 +7,10 @@ else
 	echo "Brew already installed"
 fi;
 
-# # Make sure we’re using the latest Homebrew.
+# Make sure we’re using the latest Homebrew.
 brew update
 
-# # Upgrade any already-installed formulae.
+# Upgrade any already-installed formulae.
 brew upgrade
 
 # Install other useful binaries and fonts.
