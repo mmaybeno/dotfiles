@@ -5,70 +5,9 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-# Recursively remove .DS_Store files
 alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
-
 alias ws='cd ~/workspace'
-
-alias simpleserver='python -m SimpleHTTPServer'
-
-# Docker aliases
-alias docker-rm-all="docker ps -a -q | xargs docker rm"
-alias docker-rmi-none="docker images -q --filter \"dangling=true\" | xargs docker rmi -f"
-alias docker-rmi-all="docker images -q | xargs docker rmi -f"
-alias docker-stop-all="docker stop $(docker ps -a -q)"
-
-# List open ports
+alias simpleserver='python3 -m SimpleHTTPServer'
 alias openports="sudo lsof -i -P | grep -i \"listen\""
-
-# Merge PDF files
-# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
-
-# Intuitive map function
-# For example, to list all directories that contain a certain file:
-# find . -name .gitattributes | map dirname
-alias map="xargs -n1"
-
-# View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
-# Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
-# Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
-
-alias dc='docker compose'
-
-alias dcl='docker compose logs -f'
-
-alias dcpull='docker compose pull --ignore-pull-failures'
-
-alias dcu='docker compose up -d'
-
-alias dcrm='dc rm -sf'
-
-alias dimgsort='docker images | sort -k7 -h'
-
-function dcul () {
-  dcu $@ && dcl $@
-}
-
-function dcrmu () {
-  dcrm $@ && dcu $@
-}
-function dcrmul () {
-  dcrm $@ && dcu $@ && dcl $@
-}
-
-# Kubectl
-alias k=kubectl
-complete -F __start_kubectl k
-source <(kubectl completion bash)
-
-# tabtab source for packages
-# uninstall by removing these lines
-[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
-
