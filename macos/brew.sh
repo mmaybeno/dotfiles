@@ -1,26 +1,17 @@
-#!/usr/bin/env bash
 # Install command-line tools and apps using Homebrew.
 
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-
-# Ask for the administrator password upfront.
-# sudo -v
-
-# if test ! $(which brew); then
-# 	echo "Installing Brew"
-# 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# else
-# 	echo "Brew already installed"
-# fi;
-
-# # Keep-alive: update existing `sudo` time stamp until the script has finished.
-# while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+if test ! $(which brew); then
+	echo "Installing Brew"
+	/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+	echo "Brew already installed"
+fi;
 
 # # Make sure we’re using the latest Homebrew.
-# brew update
+brew update
 
 # # Upgrade any already-installed formulae.
-# brew upgrade
+brew upgrade
 
 # Install other useful binaries and fonts.
 apps=(
@@ -70,11 +61,5 @@ apps=(
 )
 brew install "${apps[@]}"
 
-# # Switch to using brew-installed bash as default shell
-# if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-#   echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-#   chsh -s /usr/local/bin/bash;
-# fi;
-
 # # Remove outdated versions from the cellar.
-# brew cleanup
+brew cleanup
