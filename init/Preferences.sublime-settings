@@ -1,0 +1,17 @@
+{
+	"added_words":
+	[
+		"versioned",
+		"jupyter",
+		"Sagemaker",
+		"Github"
+	],
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_face": "Hack",
+	"font_size": 15,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"word_wrap": false,
+}
