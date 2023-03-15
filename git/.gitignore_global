@@ -20,4 +20,8 @@ Thumbs.db
 .ipynb_checkpoints
 
 # Large data files
-.parquet
+*.parquet
+
+*.whl
+*.bin
+*.jsonl
