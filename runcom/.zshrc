@@ -111,6 +111,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source .alias
-source .export
-source .function
+source ~/.alias
+source ~/.export
+source ~/.function
