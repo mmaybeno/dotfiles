@@ -1,6 +1,6 @@
-;[user]
-;    name = John Doe
-;    email = some_email@gmail.com
+[user]
+    name = Matt Maybeno
+    email = mmaybeno@gmail.com
 [core]
     excludesfile = ~/.gitignore_global
     autocrlf = input

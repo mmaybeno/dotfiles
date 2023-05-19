@@ -14,6 +14,11 @@ export LESS_TERMCAP_md="${yellow}";
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
+eval "$(pyenv init --path)"
+# Virtualwrapper setups
+export WORKON_HOME=~/workspace/Envs;
+export VIRTUAL_ENV_DISABLE_PROMPT=1;
+
 # Pip settings
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true;
