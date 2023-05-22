@@ -13,15 +13,24 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+# IDE specific
 .idea
 .vscode
 .python-version
 .venv
 .ipynb_checkpoints
 
+# Media files
+*.mp3
+*.jpg
+*.jpeg
+*.png
+
 # Large data files
 *.parquet
-
 *.whl
-*.bin
 *.jsonl
+*.bin
+
+# Deployment and security
+*kubeconfig*
