@@ -20,6 +20,8 @@
     stash-all = stash save --include-untracked
     undo = reset --soft HEAD^
     fa = fetch --all
+    pum = pull upstream master
+    pom = push origin master
 [fetch]
     prune = true
 [status]
