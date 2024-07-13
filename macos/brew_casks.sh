@@ -1,13 +1,10 @@
 cask_apps=(
   alfred
-  caffeine
-  datagrip
+  domzilla-caffeine
   docker
   firefox
   google-chrome
   iterm2
-  ngrok
-  phpstorm
   postman
   pycharm
   slack
@@ -18,5 +15,14 @@ cask_apps=(
 )
 brew install --cask "${cask_apps[@]}"
 
+quick_looks=(
+  ipynb-quicklook
+  qlcolorcode
+  qlstephen
+  qlmarkdown
+  quicklook-json
+  quicklook-csv
+)
+
 # Quick look apps
-brew install --cask ipynb-quicklook qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv suspicious-package
+brew install --cask "${quick_looks[@]}"

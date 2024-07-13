@@ -15,28 +15,21 @@ brew upgrade
 
 # Install other useful binaries and fonts.
 apps=(
-  bash
-  bash-completion@2
   brew-cask-completion
   cmake
+  ctop
   curl
   docker-completion
-  docker-compose-completion
-  findutils
   git
   git-lfs
   go
-  grep
   highlight
   htop
   httpie
   icdiff
   imagemagick
-  java
-  jenv
   jq
   nmap
-  node
   nvm
   openssh
   openssl
@@ -46,7 +39,6 @@ apps=(
   pipenv
   pv
   pyenv
-  python@3.10
   rename
   ruby
   screen
@@ -55,11 +47,10 @@ apps=(
   tree
   vim
   wget
-  wrk
   zlib
   zopfli
 )
 brew install "${apps[@]}"
 
-# # Remove outdated versions from the cellar.
+# Remove outdated versions from the cellar.
 brew cleanup
